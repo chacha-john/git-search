@@ -1,27 +1,45 @@
-# GitSearch
+# Git-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## By Chacha John 
 
-## Development server
+# Table of Content
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
++ [Description](#description)
++ [Design](#design)
++ [Technology Used](#technology-used)
++ [Licence](#licence)
++ [Authors Info](#authors-Info)
 
-## Code scaffolding
+# Description
+<p>An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Go Back to the top](#Git-Search)
 
-## Build
+# Design
+[Figma]()
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Technology Used
+* HTML5 - This was used for structuring the page.
 
-## Running unit tests
+* CSS3 - This was used for styling the page.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Angular CLI - Application design framework and development platform for single page applications
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[Go Back to the top](#Git-Search)
 
-## Further help
+# Licence
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Licence](LICENSE)
+
+[Go Back to the top](#Git-Search)
+
+# Authors Info
+
+Linkedin - [Chacha John](https://www.linkedin.com/in/rikonnect/)
+
+Twitter - [Chacha](https://www.twitter.com/rikonnect)
+
+Email - [Chacha John](mailto:chachaerickjo@gmail.com)
+
+[Go Back to the top](#Git-Search)
