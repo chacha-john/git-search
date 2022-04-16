@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, retry } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -10,7 +10,10 @@ export class FetchService {
 
   constructor(public http:HttpClient) { }
   getInfo(user:string):Observable<any>{
-    return this.http.get<any>(`${environment.end_point}?api_key=${environment.access_token}`)
+    console.log(user);
+    
+    return this.http.get<any>(`${environment.end_point}/${user}?api_key=${environment.access_token}&limit=10`)
+    .pipe(retry(5))
     
     
   }

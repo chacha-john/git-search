@@ -9,16 +9,16 @@ import { FetchService } from 'src/app/services/search.service';
 })
 export class SearchComponent implements OnInit {
 
-  userInfo: any = []
+  userInfo: any
 
   constructor(private fetchSerive:FetchService) { }
 
   onSubmit(term:NgForm){
     this.fetchSerive.getInfo(term.value.username).subscribe((res)=>{
       this.userInfo = res
+      console.log(this.userInfo);
     })
 
-    console.log(this.userInfo);
     
 
   }

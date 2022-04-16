@@ -1,9 +1,12 @@
 <form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
     <label for="username">Enter GitHub Username</label>
     <div class="inputs">
-        <input type="text" name="username" id="username" placeholder="Enter GitHub Username" required>
+        <input type="text" ngModel name="username" id="username" placeholder="Enter GitHub Username" required>
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     
 
 </form>
+<div class="output">
+    u
+</div>
