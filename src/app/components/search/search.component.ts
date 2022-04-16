@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { FetchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fetchSerive:FetchService) { }
+
+  onSubmit(term:NgForm){
+
+  }
 
   ngOnInit(): void {
   }

@@ -1,13 +1,7 @@
 nav{
     display: flex;
 }
-section{
-    background-image: url("../../../assets/mohammad-rahmani-Hb-WIlu_VYM-unsplash.jpg");
-    background-position: center center;
-    background-size: cover;
-    
-}
-#overlay{
+/* #overlay{
     position: fixed;
     display: none;
     width: 100%;
@@ -19,4 +13,4 @@ section{
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
     cursor: pointer;
-}
+} */

@@ -1,3 +1,6 @@
-<form>
-    
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+    <label for="username">Enter GitHub Username</label>
+    <input type="text" name="username" id="username">
+    <span><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></span>
+
 </form>
