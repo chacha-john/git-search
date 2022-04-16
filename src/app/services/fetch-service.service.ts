@@ -11,9 +11,10 @@ export class FetchServiceService {
 
   constructor(public http:HttpClient) { }
 
-  getInfo():any{
+  getInfo(user:string):Observable<any>{
     let url =  this.http.get<any>(`${environment.end_point}?api_key=${environment.access_token}`)
     console.log(url);
+    return url
     
     
   }
