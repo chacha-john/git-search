@@ -8,9 +8,6 @@ body{
     background-color: #332f3b;
     color: #DAC8FA;
     font-family: 'Itim', cursive;
-    background-image: url("assets/roman-synkevych-UT8LMo-wlyk-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 #overlay{
     position: fixed;
