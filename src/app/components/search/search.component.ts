@@ -10,18 +10,18 @@ import { FetchService } from 'src/app/services/search.service';
 })
 export class SearchComponent implements OnInit {
 
-  userInfo: User = new User('','','','','','','','')
+  userInfo: User = new User('','','','','','','')
 
   constructor(private fetchSerive:FetchService) { }
 
   onSubmit(term:NgForm){
     this.fetchSerive.getInfo(term.value.username).subscribe((res)=>{
+      console.log(res);
       this.userInfo.bio = res.bio
       this.userInfo.name = res.name
       this.userInfo.repos = res.public_repos
       this.userInfo.followers = res.followers
       this.userInfo.following = res.following
-      this.userInfo.gists = res.public_gists
       this.userInfo.avatar = res.avatar_url
       this.userInfo.login = res.login
       

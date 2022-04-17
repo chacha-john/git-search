@@ -11,7 +11,7 @@ export class SidebarComponent implements OnInit {
 
   loggedInUser:string = "chacha-john"
 
-  defaultUser:User = new User('','','','','','','','')
+  defaultUser:User = new User('','','','','','','')
   
   userLink = ""
 
@@ -24,7 +24,6 @@ export class SidebarComponent implements OnInit {
       this.defaultUser.repos = res.public_repos
       this.defaultUser.followers = res.followers
       this.defaultUser.following = res.following
-      this.defaultUser.gists = res.public_gists
       this.defaultUser.avatar = res.avatar_url
       this.defaultUser.login = res.login
       this.userLink = res.html_url

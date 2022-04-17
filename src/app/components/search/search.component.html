@@ -1,12 +1,12 @@
-<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
-    <label for="username">Enter GitHub Username</label>
+<form #searchForm="ngForm" (keyup.enter)="onSubmit(searchForm)">
     <div class="inputs">
-        <input type="text" ngModel name="username" id="username" placeholder="Enter GitHub Username" required>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input type="text" ngModel name="username" id="username" placeholder="Search User by Username" required>
+        <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
     </div>
     
 
 </form>
 <div class="output">
+    
     
 </div>
