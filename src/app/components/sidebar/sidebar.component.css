@@ -1,5 +1,5 @@
 img{
-    width: 10%;
+    width: 40%;
     border-radius: 50%;
     vertical-align: middle;
 }
@@ -15,4 +15,7 @@ a{
 }
 span{
     margin-right: 2%;
+}
+.sidebar div{
+    margin: 4%;
 }
