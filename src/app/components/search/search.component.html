@@ -1,12 +1,25 @@
-<form #searchForm="ngForm" (keyup.enter)="onSubmit(searchForm)">
-    <div class="inputs">
-        <input type="text" ngModel name="username" id="username" placeholder="Search User by Username" required>
-        <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+<form #searchForm="ngForm" (keyup.enter)="onSubmit(searchForm)" ngNativeValidate>
+  <div class="inputs">
+    <div class="radioInput">
+      <div class="user">
+        <label for="user">Search GitHub User</label>
+        <input type="radio" ngModel name="iput" id="user" value="users" required>
+
+      </div>
+      <div class="repos">
+        <label for="repos">Search GitHub repository</label>
+        <input type="radio" ngModel name="iput" id="repos" value="repos" required>
+      </div>
+
     </div>
-    
+    <div class="searchTerm">
+      <input type="text" ngModel name="username" id="username" placeholder="Search User by Username or repository by repository name" required>
+    </div>
+  </div>
+
 
 </form>
 <div class="output">
-    
-    
+
+
 </div>

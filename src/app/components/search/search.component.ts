@@ -12,10 +12,13 @@ export class SearchComponent implements OnInit {
 
   userInfo: User = new User('','','','','','','')
 
+  searchedItems:object = []
+
   constructor(private fetchSerive:FetchService) { }
 
-  onSubmit(term:NgForm){
-    this.fetchSerive.getInfo(term.value.username).subscribe((res)=>{
+  onSubmit(term:NgForm){  
+    if (term.value.iput == "users"){
+      this.fetchSerive.getInfo(term.value.username).subscribe((res)=>{
       console.log(res);
       this.userInfo.bio = res.bio
       this.userInfo.name = res.name
@@ -26,8 +29,20 @@ export class SearchComponent implements OnInit {
       this.userInfo.login = res.login
       
     })
-
     
+    }
+    else if (term.value.iput=="repos"){
+      this.fetchSerive.getRepos(term.value.username).subscribe((res)=>{
+        this.searchedItems = res.items
+        console.log(this.searchedItems);
+        
+        
+      })
+    }
+    else{
+      console.log(Error);
+      
+    }  
 
   }
 

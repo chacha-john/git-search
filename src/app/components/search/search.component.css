@@ -1,41 +1,70 @@
-input{
-    display: block;
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #DAC8FA;
-    padding: 0 10%;
-    background-color: transparent;
-    border: 2px solid #DAC8FA;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px rgba(218, 200, 250) inset !important;
+input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #DAC8FA;
+  padding: 0 5%;
+  background-color: transparent;
+  border: .5px solid #DAC8FA;
+  color: #DAC8FA;
+  font-size: large;
 }
 
-label{
-    font-size: 200%;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(218, 200, 250) inset !important;
 }
-form{
-    width: 60%;
-    position: relative;
-    left: 20%;
-    margin-top: 5%;
+
+label {
+  font-size: 150%;
 }
-button{
-    /* border: 1px solid #DAC8FA; */
-    padding: 2px;
-    height: 40px;
-    background-color: transparent;
-    color: #DAC8FA;
-    font-size: 200%;
-    margin: 0 -.1%;
-    border-radius: 5px;
+
+form {
+  width: 60%;
+  position: relative;
+  left: 20%;
+  margin-top: 5%;
 }
-.inputs{
+
+button {
+  /* border: 1px solid #DAC8FA; */
+  padding: 2px;
+  height: 40px;
+  background-color: transparent;
+  color: #DAC8FA;
+  font-size: 200%;
+  margin: 0 -.1%;
+  border-radius: 5px;
+}
+
+/* .inputs{
     display: flex;
     margin: 2% 0;
 
+} */
+.radioInput {
+  display: flex;
+}
+
+label {
+  text-align: center;
+  display: block;
+}
+
+.radioInput div {
+  display: flex;
+  width: 100%;
+  font-size: x-large;
+}
+
+input[type=radio] {
+  margin-top: 3%;
+  width: 10%;
+  height: 50%;
+}
+.searchTerm{
+    margin-top: 5%;
 }
