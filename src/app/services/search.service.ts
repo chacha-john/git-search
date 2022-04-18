@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment';
 export class FetchService {
 
   constructor(public http:HttpClient) { }
-  getInfo(user:string):Observable<any>{
-    console.log(user);
-    
-    return this.http.get<any>(`${environment.end_point}/${user}?api_key=${environment.access_token}&limit=10`)
+  getInfo(user:string):Observable<any>{ 
+    return this.http.get<any>(`${environment.userEndPoint}/${user}?api_key=${environment.access_token}&limit=10`)
     .pipe(retry(5))
-    
-    
+  }
+  getRepos(repo:string){
+    return this.http.get<any>(`${environment.reposEndPoint}?q=${repo}&api_key${environment.access_token}&limit=10`)
+    .pipe(retry(5))
   }
 }
