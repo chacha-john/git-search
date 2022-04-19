@@ -18,17 +18,17 @@ export class SidebarComponent implements OnInit {
   constructor(private fetchService:FetchService) { }
 
   ngOnInit(): void {
-    // this.fetchService.getInfo(this.loggedInUser).subscribe((res)=>{
-    //   this.defaultUser.bio = res.bio
-    //   this.defaultUser.name = res.name
-    //   this.defaultUser.repos = res.public_repos
-    //   this.defaultUser.followers = res.followers
-    //   this.defaultUser.following = res.following
-    //   this.defaultUser.avatar = res.avatar_url
-    //   this.defaultUser.login = res.login
-    //   this.userLink = res.html_url
+    this.fetchService.getInfo(this.loggedInUser).subscribe((res)=>{
+      this.defaultUser.bio = res.bio
+      this.defaultUser.name = res.name
+      this.defaultUser.repos = res.public_repos
+      this.defaultUser.followers = res.followers
+      this.defaultUser.following = res.following
+      this.defaultUser.avatar = res.avatar_url
+      this.defaultUser.login = res.login
+      this.userLink = res.html_url
 
-    // })
+    })
   }
 
 }
