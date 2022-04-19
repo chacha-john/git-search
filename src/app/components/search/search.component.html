@@ -1,25 +1,43 @@
-<form #searchForm="ngForm" (keyup.enter)="onSubmit(searchForm)" ngNativeValidate>
-  <div class="inputs">
-    <div class="radioInput">
-      <div class="user">
-        <label for="user">Search GitHub User</label>
-        <input type="radio" ngModel name="iput" id="user" value="users" required>
-
+<div [hidden]="submitted" class="form">
+  <form #searchForm="ngForm" (keyup.enter)="onSubmit(searchForm)" ngNativeValidate>
+    <div class="inputs">
+      <div class="radioInput">
+        <div class="user">
+          <label for="user">Search GitHub User</label>
+          <input type="radio" ngModel name="iput" id="user" value="users" required>
+  
+        </div>
+        <div class="repos">
+          <label for="repos">Search GitHub repository</label>
+          <input type="radio" ngModel name="iput" id="repos" value="repos" required>
+        </div>
+  
       </div>
-      <div class="repos">
-        <label for="repos">Search GitHub repository</label>
-        <input type="radio" ngModel name="iput" id="repos" value="repos" required>
+      <div class="searchTerm">
+        <input type="text" ngModel name="username" id="username" placeholder="Search User by Username or repository by repository name" required>
       </div>
-
     </div>
-    <div class="searchTerm">
-      <input type="text" ngModel name="username" id="username" placeholder="Search User by Username or repository by repository name" required>
+  
+  
+  </form>
+</div>
+<div [hidden]="!submitted" class="output">
+    <div [hidden]="!user" class="userInfo">
+        <img src="{{userInfo.avatar}}" alt="User Avatar">
+        <p>{{userInfo.name}}</p>
+        <p>{{userInfo.bio}}</p>
+        <p>Public Repositories: {{userInfo.repos}}</p>
+        <p>Followers: {{userInfo.followers}}</p>
+        <p>Following: {{userInfo.following}}</p>
     </div>
-  </div>
-
-
-</form>
-<div class="output">
+    <!-- <div [hidden]="!repos" class="reposInfo" *ngFor="let each of searchedItems">
+      <div *ngFor=" let item of each ; let i = index">
+        <p>{{item[i].name}}</p>
+        <p>Description: {{item[i].description}}</p>
+        <p>Owner: {{item[i].owner.login}}</p>
+        <p>{{item[i].url}}</p>
+      </div>
+    </div> -->
 
 
 </div>

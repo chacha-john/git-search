@@ -13,7 +13,7 @@ export class FetchService {
     return this.http.get<any>(`${environment.userEndPoint}/${user}?api_key=${environment.access_token}&limit=10`)
     .pipe(retry(5))
   }
-  getRepos(repo:string){
+  getRepos(repo:string):Observable<any>{
     return this.http.get<any>(`${environment.reposEndPoint}?q=${repo}&api_key${environment.access_token}&limit=10`)
     .pipe(retry(5))
   }

@@ -68,3 +68,17 @@ input[type=radio] {
 .searchTerm{
     margin-top: 5%;
 }
+.userInfo{
+  width: 60%;
+  position: relative;
+  left: 20%;
+  border-radius: 10px;
+  box-shadow: 10px 5px 20px black;
+  padding: 2%;
+  text-align: center;
+  font-size: 200%;
+  margin-top: 2%;
+}
+/* .output{
+  display: none;
+} */
